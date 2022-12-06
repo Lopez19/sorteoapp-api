@@ -1,9 +1,12 @@
+import dotenv from "dotenv";
 import mongoose from "mongoose";
+dotenv.config();
 
+const pe = process.env;
 const db = mongoose.connect;
 
 const connectDB = () => {
-  db("mongodb://0.0.0.0:27017/sorteosdb", {
+  db(pe.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

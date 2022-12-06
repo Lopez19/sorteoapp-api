@@ -108,7 +108,6 @@ export const updateSorteoById = (req, res) => {
   );
 };
 
-// Update Sorteo Participants
 export const updateSorteoParticipants = (req, res) => {
   // console.log(req.body);
   // console.log(req.params);

@@ -5,7 +5,7 @@ const sorteoSchema = new Schema(
     name: String,
     description: String,
     date: Date,
-    winner: String,
+    winner: {},
     participants: [],
     price: Number,
     status: Boolean,

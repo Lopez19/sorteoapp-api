@@ -197,7 +197,7 @@ export const chooseWinner = (req, res) => {
 
     Sorteo.findByIdAndUpdate(
       sorteoId,
-      { winner: winner },
+      { winner: winner, participants: [] },
       { new: true },
       (err, sorteoUpdated) => {
         if (err) {

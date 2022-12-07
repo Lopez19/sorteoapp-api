@@ -175,3 +175,43 @@ export const deleteSorteoById = (req, res) => {
     });
   });
 };
+
+// Elejir ganador
+export const chooseWinner = (req, res) => {
+  console.log(req.params);
+
+  // const { sorteoId } = req.params;
+
+  // Sorteo.findById(sorteoId, (err, sorteo) => {
+  //   if (err) {
+  //     return res.status(500).json({
+  //       message: "Error al obtener el sorteo",
+  //       err,
+  //     });
+  //   }
+
+  //   const winner =
+  //     sorteo.participants[
+  //       Math.floor(Math.random() * sorteo.participants.length)
+  //     ];
+
+  //   Sorteo.findByIdAndUpdate(
+  //     sorteoId,
+  //     { winner: winner },
+  //     { new: true },
+  //     (err, sorteoUpdated) => {
+  //       if (err) {
+  //         return res.status(500).json({
+  //           message: "Error al actualizar el sorteo",
+  //           err,
+  //         });
+  //       }
+
+  //       res.status(204).json({
+  //         message: "Sorteo actualizado correctamente",
+  //         sorteoUpdated,
+  //       });
+  //     }
+  //   );
+  // });
+};

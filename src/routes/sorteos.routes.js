@@ -39,5 +39,8 @@ router.delete(
   sorteosCtrl.deleteSorteoById
 );
 
+// Select Winner
+router.put("/start/:sorteoId", [authJwt.verifyToken], sorteosCtrl.chooseWinner);
+
 // Export router
 export default router;

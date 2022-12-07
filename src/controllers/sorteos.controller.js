@@ -215,3 +215,24 @@ export const chooseWinner = (req, res) => {
     );
   });
 };
+
+// getWinner
+export const getWinner = (req, res) => {
+  // console.log(req.params);
+
+  const { sorteoId } = req.params;
+
+  Sorteo.findById(sorteoId, (err, sorteo) => {
+    if (err) {
+      return res.status(500).json({
+        message: "Error al obtener el sorteo",
+        err,
+      });
+    }
+
+    res.status(200).json({
+      message: "Sorteo obtenido correctamente",
+      sorteo,
+    });
+  });
+};

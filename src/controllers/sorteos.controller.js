@@ -232,7 +232,7 @@ export const getWinner = (req, res) => {
 
     res.status(200).json({
       message: "Sorteo obtenido correctamente",
-      sorteo,
+      sorteo: sorteo.winner,
     });
   });
 };

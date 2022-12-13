@@ -8,6 +8,8 @@ import { createRoles } from "./libs/initialSetup";
 
 // Import routes
 import sorteosRoutes from "./routes/sorteos.routes";
+import sorteos2Routes from "./routes/sorteos2.routes";
+
 import authRoutes from "./routes/auth.routes";
 import userRoutes from "./routes/user.routes";
 
@@ -34,6 +36,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/sorteos", sorteosRoutes);
+app.use("/api/sorteos2", sorteos2Routes);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
